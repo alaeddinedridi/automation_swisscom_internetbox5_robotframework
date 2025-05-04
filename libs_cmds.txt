@@ -1,0 +1,12 @@
+----- Robotframework libraries -----
+
+pip install robotframework
+pip install robotframework-seleniumlibrary
+pip install robotframework-browser
+
+----- Robotframework commands -----
+
+rfbrowser init
+
+
+if it says command not found then run this: python -m Browser.entry init
