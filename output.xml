@@ -1,35 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.11.11 on linux)" generated="2025-05-04T13:48:38.871136" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.11.11 on linux)" generated="2025-05-05T16:17:01.276961" rpa="false" schemaversion="5">
 <suite id="s1" name="Login" source="/home/ala/Documents/automation webui/internetbox 5 automation/tests/login.robot">
-<test id="s1-t1" name="Open Firefox With SOCKS Proxy" line="5">
+<test id="s1-t1" name="Auth Correct Password" line="6">
+<kw name="Given Navigator Is Open" owner="loginPage">
 <kw name="Open Firefox With Socks Proxy" owner="FirefoxWithProxy">
-<msg time="2025-05-04T13:48:47.538934" level="INFO">${driver} = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="6c0dad24-84c5-45fd-9b4d-1c906ee78358")&gt;</msg>
+<msg time="2025-05-05T16:17:08.228778" level="INFO">${driver} = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="6f84c965-0aaa-4e61-8e16-2e67846ac6ce")&gt;</msg>
 <var>${driver}</var>
-<arg>http://192.168.1.1/</arg>
-<status status="PASS" start="2025-05-04T13:48:38.989660" elapsed="8.549432"/>
+<arg>${HGWURL}</arg>
+<status status="PASS" start="2025-05-05T16:17:01.467722" elapsed="6.761208"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-05T16:17:08.234613" level="INFO">Page title is 'Internet-Box'.</msg>
+<arg>Internet-Box</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-05T16:17:08.229322" elapsed="0.005520"/>
+</kw>
+<status status="PASS" start="2025-05-05T16:17:01.466778" elapsed="6.768311"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-04T13:48:52.540523" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
+<msg time="2025-05-05T16:17:18.236156" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-04T13:48:47.539698" elapsed="5.001113"/>
+<status status="PASS" start="2025-05-05T16:17:08.235498" elapsed="10.000995"/>
 </kw>
-<kw name="${driver}.quit()">
-<msg time="2025-05-04T13:48:52.544273" level="FAIL">No keyword with name '${driver}.quit()' found.</msg>
-<status status="FAIL" start="2025-05-04T13:48:52.544137" elapsed="0.000287">No keyword with name '${driver}.quit()' found.</status>
+<kw name="When I Enter The Correct Password" owner="loginPage">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-05T16:17:18.240326" level="INFO">Typing password into text field 'name:login-password'.</msg>
+<msg time="2025-05-05T16:17:18.275807" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${passwordTextBox}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-05T16:17:18.239178" elapsed="0.101941"/>
 </kw>
-<status status="FAIL" start="2025-05-04T13:48:38.988541" elapsed="13.556691">No keyword with name '${driver}.quit()' found.</status>
+<arg>test1234</arg>
+<status status="PASS" start="2025-05-05T16:17:18.237608" elapsed="0.103721"/>
+</kw>
+<kw name="And I Click On The Login Button" owner="loginPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-05T16:17:18.343018" level="INFO">Clicking element 'xpath://a[@name="login-button"]'.</msg>
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-05T16:17:18.342642" elapsed="0.246195"/>
+</kw>
+<status status="PASS" start="2025-05-05T16:17:18.342109" elapsed="0.246960"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-05T16:17:18.589733" elapsed="1.039974"/>
+</kw>
+<doc>Checks if authentication works with valid username and password</doc>
+<tag>Sanity</tag>
+<status status="PASS" start="2025-05-05T16:17:01.465393" elapsed="18.164508"/>
 </test>
-<status status="FAIL" start="2025-05-04T13:48:38.872415" elapsed="13.674479"/>
+<status status="PASS" start="2025-05-05T16:17:01.278465" elapsed="18.352378"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">Sanity</stat>
 </tag>
 <suite>
-<stat name="Login" id="s1" pass="0" fail="1" skip="0">Login</stat>
+<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
 </suite>
 </statistics>
 <errors>

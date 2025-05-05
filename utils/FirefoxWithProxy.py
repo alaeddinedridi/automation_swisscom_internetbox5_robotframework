@@ -1,6 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
+from robot.libraries.BuiltIn import BuiltIn
+from SeleniumLibrary import SeleniumLibrary
 
 class FirefoxWithProxy:
     def open_firefox_with_socks_proxy(self, url="http://example.com"):
@@ -15,5 +17,10 @@ class FirefoxWithProxy:
         options.profile = profile
 
         driver = webdriver.Firefox(options=options)
+
+        # Register the driver with SeleniumLibrary
+        seleniumlib = BuiltIn().get_library_instance("SeleniumLibrary")
+        seleniumlib.register_driver(driver, alias=None)
+
         driver.get(url)
         return driver

@@ -1,8 +1,14 @@
 *** Settings ***
-Library    FirefoxWithProxy.py
+Resource    ../pageObjects/loginPage.robot
+
 
 *** Test Cases ***
-Open Firefox With SOCKS Proxy
-    ${driver}=    Open Firefox With Socks Proxy    http://192.168.1.1/
-    Sleep    5s
-    ${driver}.quit()
+Auth Correct Password
+    [Documentation]    Checks if authentication works with valid username and password
+    [Tags]    Sanity
+    Given Navigator Is Open
+    sleep   15
+    When I Enter The Correct Password    test1234
+    And I Click On The Login Button
+    #Then Home page should be open
+    [Teardown]    Close Browser
