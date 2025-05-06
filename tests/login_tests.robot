@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../pageObjects/loginPage.robot
+Resource    ../pages/loginPage.robot
 
 
 *** Test Cases ***
