@@ -1,14 +1,13 @@
 *** Settings ***
-Resource    ../pages/loginPage.robot
-
+Resource    ../pages/login/loginKeywords.robot
+Resource    ../resources/CommonKeywords.robot
 
 *** Test Cases ***
 Auth Correct Password
     [Documentation]    Checks if authentication works with valid username and password
     [Tags]    Sanity
-    Given Navigator Is Open
-    sleep   15
-    When I Enter The Correct Password    test1234
-    And I Click On The Login Button
-    #Then Home page should be open
-    [Teardown]    Close Browser
+    Navigator Is Open
+    I Enter The Correct Password    test1234
+    I Click On The Login Button
+    Home page should be open
+    #Common Test Teardown

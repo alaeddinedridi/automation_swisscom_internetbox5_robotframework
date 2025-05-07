@@ -11,4 +11,5 @@ rfbrowser init
 
 if it says command not found then run this: python -m Browser.entry init
 
-to a test, eg: robot ./tests/login.robot
+run test, eg: robot --outputdir results ./tests/login_tests.robot
+
