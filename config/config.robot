@@ -1,5 +1,8 @@
 *** Variables ***
 
 ${browser}    firefox
-${HGWIP}    192.168.1.1
-${HGWURL}     http://${HGWIP}/
+${HGW_IP}    192.168.1.1
+${HGW_URL}     http://${HGW_IP}/
+${language}       fr
+${webui_password}    test1234
+${webui_title}    Internet-Box

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.11 on linux)" generated="2025-05-08T16:44:39.244079" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="/home/ala/Documents/automation webui/internetbox 5 automation/tests/login_tests.robot">
+<test id="s1-t1" name="Auth Correct Password" line="9">
+<kw name="Navigator is open" owner="CommonKeywords">
+<kw name="Open Firefox With Socks Proxy" owner="FirefoxWithProxy">
+<msg time="2025-05-08T16:44:44.868150" level="INFO">${driver} = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="20ed4425-6b19-4e8a-97f0-7c129a03db2b")&gt;</msg>
+<var>${driver}</var>
+<arg>${HGW_URL}</arg>
+<status status="PASS" start="2025-05-08T16:44:39.471381" elapsed="5.396856"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-08T16:44:44.879668" level="INFO">Page title is 'Internet-Box'.</msg>
+<arg>${webui_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-08T16:44:44.868525" elapsed="0.011367"/>
+</kw>
+<status status="PASS" start="2025-05-08T16:44:39.469598" elapsed="5.410529"/>
+</kw>
+<kw name="I enter the correct password" owner="loginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${passwordTextBox}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-08T16:44:44.883277" elapsed="2.725837"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-08T16:44:47.609966" level="INFO">Typing password into text field 'name:login-password'.</msg>
+<msg time="2025-05-08T16:44:47.628712" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${passwordTextBox}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-08T16:44:47.609490" elapsed="0.086316"/>
+</kw>
+<arg>${webui_password}</arg>
+<status status="PASS" start="2025-05-08T16:44:44.882626" elapsed="2.813334"/>
+</kw>
+<kw name="I click on the login button" owner="loginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-08T16:44:47.696778" elapsed="0.023276"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-08T16:44:47.720991" level="INFO">Clicking element 'xpath://*[@name="login-button"]'.</msg>
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-08T16:44:47.720453" elapsed="0.236746"/>
+</kw>
+<status status="PASS" start="2025-05-08T16:44:47.696329" elapsed="0.261189"/>
+</kw>
+<kw name="Home page should be open" owner="loginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${weakPasswordModal}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-08T16:44:47.959763" elapsed="1.971390"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-08T16:44:49.932074" level="INFO">${value} = Mot de passe portail web faible</msg>
+<var>${value}</var>
+<arg>${homePage.password.modal.title.${language}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-08T16:44:49.931604" elapsed="0.000530"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-08T16:44:49.932975" level="INFO">Verifying element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' contains exact text 'Mot de passe portail web faible'.</msg>
+<arg>${weakPasswordModal}</arg>
+<arg>${homePage.password.modal.title.${language}}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-08T16:44:49.932410" elapsed="0.023914"/>
+</kw>
+<arg>${language}</arg>
+<doc>Arguments : language (fr,en)</doc>
+<status status="PASS" start="2025-05-08T16:44:47.958119" elapsed="1.998394"/>
+</kw>
+<doc>Checks if authentication works with valid username and password</doc>
+<tag>Sanity</tag>
+<status status="PASS" start="2025-05-08T16:44:39.467764" elapsed="10.490114"/>
+</test>
+<status status="PASS" start="2025-05-08T16:44:39.245766" elapsed="10.714272"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Sanity</stat>
+</tag>
+<suite>
+<stat name="Login Tests" id="s1" pass="1" fail="0" skip="0">Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
