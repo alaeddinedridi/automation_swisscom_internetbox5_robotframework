@@ -1,0 +1,29 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.Logina Tests                                                            
+==============================================================================
+Verify Authentication with Parallel :: Checks if authentication wo...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/ala/Documents/automation webui/internetbox 5 automation/tests/logina_tests.robot:12
+    T:  Verify Authentication with Parallel    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/ala/Documents/automation webui/internetbox 5 automation/tests/logina_tests.robot:18
+      Auth Check Successful Login    ${language}
+      |  ${language} = fr (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/ala/Documents/automation webui/internetbox 5 automation/pages/login/loginKeywords.robot:22
+      Wait Until Element Is Visible    ${weakPasswordModal}    timeout=10s
+      |  ${weakPasswordModal} = xpath://*[contains(@class, 'modalWindowInner')]/div/span (str)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 10 seconds.
+------------------------------------------------------------------------------
+Tests.Logina Tests                                                    | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /home/ala/Documents/automation webui/internetbox 5 automation/pabot_results/1/output.xml

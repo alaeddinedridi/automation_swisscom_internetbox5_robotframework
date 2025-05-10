@@ -3,6 +3,11 @@
 pip install robotframework
 pip install robotframework-seleniumlibrary
 pip install robotframework-browser
+pip install robotframework-pabot
+
+
+
+
 
 ----- Robotframework commands -----
 
@@ -13,3 +18,35 @@ if it says command not found then run this: python -m Browser.entry init
 
 run test, eg: robot --outputdir results ./tests/login_tests.robot
 
+run 3 parallel tests: pabot --outputdir results --processes 3 ./tests/
+
+run parallel tests that are with tag sanity: pabot --outputdir results --processes 2 --include sanity ./tests/
+
+only run tests with tag sanity: robot --outputdir results --include sanity ./tests/
+
+----- Docker - selenium hub -----
+
+Start the hub:
+
+docker run -d -p 4442-4444:4442-4444 --name selenium-hub selenium/hub:4.21.0
+
+
+Start the Chrome node:
+
+docker run -d --name chrome-node --network container:selenium-hub \
+  -e SE_EVENT_BUS_HOST=localhost \
+  -e SE_EVENT_BUS_PUBLISH_PORT=4442 \
+  -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 \
+  selenium/node-chrome:4.21.0
+  
+  
+http://localhost:4444/ui
+
+
+
+remove containers:
+docker rm -f selenium-hub chrome-node
+
+
+list containers:
+docker ps

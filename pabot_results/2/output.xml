@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.11 on linux)" generated="2025-05-09T16:41:34.291718" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/ala/Documents/automation webui/internetbox 5 automation/tests">
+<suite id="s1-s1" name="Shub" source="/home/ala/Documents/automation webui/internetbox 5 automation/tests/shub.robot">
+<test id="s1-s1-t1" name="Open Page On Selenium Grid" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:34.528414" level="INFO">Opening browser 'chrome' to base url 'https://google.com' through remote server at 'http://localhost:4444/wd/hub'.</msg>
+<msg time="2025-05-09T16:42:06.039612" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<arg>https://google.com</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-05-09T16:41:34.527699" elapsed="31.512238">Execution terminated by signal</status>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>Example Domain</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2025-05-09T16:42:06.042601" elapsed="0.000210"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-05-09T16:42:06.043173" elapsed="0.000138"/>
+</kw>
+<status status="FAIL" start="2025-05-09T16:41:34.526153" elapsed="31.517583">Execution terminated by signal</status>
+</test>
+<status status="FAIL" start="2025-05-09T16:41:34.334077" elapsed="31.710646"/>
+</suite>
+<status status="FAIL" start="2025-05-09T16:41:34.306825" elapsed="31.739458"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="1" skip="0">Tests</stat>
+<stat name="Shub" id="s1-s1" pass="0" fail="1" skip="0">Tests.Shub</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

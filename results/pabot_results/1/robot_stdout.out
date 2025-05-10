@@ -1,0 +1,15 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.Logina Tests                                                            
+==============================================================================
+Verify Authentication with Parallel :: Checks if authentication wo... | FAIL |
+Keyword 'Wait Until Element Is Visible' failed after retrying for 30 seconds. The last error was: Element 'name:login-password' not visible after 1 second.
+------------------------------------------------------------------------------
+Tests.Logina Tests                                                    | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /home/ala/Documents/automation webui/internetbox 5 automation/results/pabot_results/1/output.xml

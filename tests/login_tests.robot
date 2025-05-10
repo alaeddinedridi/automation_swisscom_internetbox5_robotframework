@@ -5,12 +5,22 @@ Resource    ../pages/login/loginKeywords.robot
 Resource    ../resources/CommonKeywords.robot
 Resource    ../config/config.robot
 
+Test Setup        Open Navigator
+Test Teardown     Close Browser
+
 *** Test Cases ***
-Auth Correct Password
-    [Documentation]    Checks if authentication works with valid username and password
+Verify Authentication with Correct Password
+    [Documentation]    Checks if authentication works with valid password
     [Tags]    Sanity
-    Navigator Is Open
-    I Enter The Correct Password    ${webui_password}
-    I Click On The Login Button
-    Home page should be open    ${language}
-    #Common Test Teardown
+    Auth Wait Login Page Loaded
+    Auth Enter Password    ${webui_password}
+    Auth Click Login Button
+    Auth Check Successful Login    ${language}
+
+Verify Authentication with Wrong Password
+    [Documentation]    Checks if authentication does not work with a wrong password
+    [Tags]    Smoke
+    Auth Wait Login Page Loaded
+    Auth Enter Password    ${webui_wrong_password}
+    Auth Click Login Button
+    Auth Check Successful Login    ${language}

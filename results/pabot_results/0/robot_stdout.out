@@ -1,0 +1,32 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.Login Tests                                                             
+==============================================================================
+Verify Authentication with Correct Password :: Checks if authentic... | FAIL |
+Keyword 'Wait Until Element Is Visible' failed after retrying for 30 seconds. The last error was: Element 'name:login-password' not visible after 1 second.
+------------------------------------------------------------------------------
+Verify Authentication with Wrong Password :: Checks if authenticat...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/ala/Documents/automation webui/internetbox 5 automation/tests/login_tests.robot:20
+    T:  Verify Authentication with Wrong Password    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/ala/Documents/automation webui/internetbox 5 automation/tests/login_tests.robot:26
+      Auth Check Successful Login    ${language}
+      |  ${language} = fr (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/ala/Documents/automation webui/internetbox 5 automation/pages/login/loginKeywords.robot:22
+      Wait Until Element Is Visible    ${weakPasswordModal}    timeout=10s
+      |  ${weakPasswordModal} = xpath://*[contains(@class, 'modalWindowInner')]/div/span (str)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 10 seconds.
+------------------------------------------------------------------------------
+Tests.Login Tests                                                     | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Tests                                                                 | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Output:  /home/ala/Documents/automation webui/internetbox 5 automation/results/pabot_results/0/output.xml

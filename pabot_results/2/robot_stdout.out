@@ -1,0 +1,26 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.Shub                                                                    
+==============================================================================
+Open Page On Selenium Grid                                              
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/ala/Documents/automation webui/internetbox 5 automation/tests/shub.robot:9
+    T:  Open Page On Selenium Grid    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/ala/Documents/automation webui/internetbox 5 automation/tests/shub.robot:10
+      Open Browser    https://google.com    ${BROWSER}    remote_url=${REMOTE_URL}
+      |  ${BROWSER} = chrome (str)
+      |  remote_url=${REMOTE_URL} = remote_url=http://localhost:4444/wd/hub (str)
+______________________________________________________________________________
+| FAIL |
+Execution terminated by signal
+------------------------------------------------------------------------------
+Tests.Shub                                                            | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /home/ala/Documents/automation webui/internetbox 5 automation/pabot_results/2/output.xml

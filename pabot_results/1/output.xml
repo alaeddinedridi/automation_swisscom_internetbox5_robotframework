@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.11 on linux)" generated="2025-05-09T16:40:02.054726" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/ala/Documents/automation webui/internetbox 5 automation/tests">
+<suite id="s1-s1" name="Logina Tests" source="/home/ala/Documents/automation webui/internetbox 5 automation/tests/logina_tests.robot">
+<test id="s1-s1-t1" name="Verify Authentication with Parallel" line="12">
+<kw name="Open Navigator" owner="CommonKeywords" type="SETUP">
+<kw name="Open Firefox With Socks Proxy" owner="FirefoxWithProxy">
+<msg time="2025-05-09T16:40:53.450096" level="INFO">${driver} = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="56c71dc0-1efa-467e-ac37-a460265e50b1")&gt;</msg>
+<var>${driver}</var>
+<arg>${HGW_URL}</arg>
+<status status="PASS" start="2025-05-09T16:40:02.347824" elapsed="51.102901"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:40:53.482216" level="INFO">Page title is 'Internet-Box'.</msg>
+<arg>${webui_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-09T16:40:53.451265" elapsed="0.031213"/>
+</kw>
+<status status="PASS" start="2025-05-09T16:40:02.345465" elapsed="51.137308"/>
+</kw>
+<kw name="Auth Wait Login Page Loaded" owner="loginKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:40:54.648577" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:40:54.648951" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:40:53.487734" elapsed="1.163768">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:40:57.705117" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:40:57.705334" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:40:56.652253" elapsed="1.053688">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:00.759786" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:00.760091" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:40:59.706789" elapsed="1.054110">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:03.867608" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:03.867842" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:02.761665" elapsed="1.106737">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:06.911155" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:06.911371" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:05.868922" elapsed="1.043010">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:09.959090" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:09.959385" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:08.912694" elapsed="1.047540">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:13.022208" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:13.022404" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:11.961130" elapsed="1.061786">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:16.095802" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:16.095991" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:15.023650" elapsed="1.072859">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:19.212892" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:19.213177" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:18.097016" elapsed="1.116924">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-09T16:41:21.214638" elapsed="0.062070"/>
+</kw>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-05-09T16:40:53.484055" elapsed="27.792924"/>
+</kw>
+<status status="PASS" start="2025-05-09T16:40:53.483249" elapsed="27.794034"/>
+</kw>
+<kw name="Auth Enter Password" owner="loginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${passwordTextBox}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-09T16:41:21.278594" elapsed="0.034755"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:21.314275" level="INFO">Typing password into text field 'name:login-password'.</msg>
+<msg time="2025-05-09T16:41:21.338903" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${passwordTextBox}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-09T16:41:21.313734" elapsed="0.159377"/>
+</kw>
+<arg>${webui_password}</arg>
+<status status="PASS" start="2025-05-09T16:41:21.277743" elapsed="0.195651"/>
+</kw>
+<kw name="Auth Click Login Button" owner="loginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-09T16:41:21.474541" elapsed="0.066582"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:21.542078" level="INFO">Clicking element 'xpath://*[@name="login-button"]'.</msg>
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-09T16:41:21.541558" elapsed="0.371234"/>
+</kw>
+<status status="PASS" start="2025-05-09T16:41:21.473827" elapsed="0.439250"/>
+</kw>
+<kw name="Auth Check Successful Login" owner="loginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:32.037660" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:32.037864" level="FAIL">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 10 seconds.</msg>
+<arg>${weakPasswordModal}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:21.914302" elapsed="10.124499">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 10 seconds.</status>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>${weakPasswordModal}</arg>
+<arg>${homePage.password.modal.title.${language}}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2025-05-09T16:41:32.039367" elapsed="0.000139"/>
+</kw>
+<arg>${language}</arg>
+<doc>Arguments : language (fr,en)</doc>
+<status status="FAIL" start="2025-05-09T16:41:21.913521" elapsed="10.126266">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 10 seconds.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-09T16:41:32.040295" elapsed="1.676596"/>
+</kw>
+<doc>Checks if authentication works with valid password</doc>
+<tag>Sanity</tag>
+<status status="FAIL" start="2025-05-09T16:40:02.343429" elapsed="91.374234">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 10 seconds.</status>
+</test>
+<status status="FAIL" start="2025-05-09T16:40:02.130503" elapsed="91.588382"/>
+</suite>
+<status status="FAIL" start="2025-05-09T16:40:02.079980" elapsed="91.640205"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Sanity</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="1" skip="0">Tests</stat>
+<stat name="Logina Tests" id="s1-s1" pass="0" fail="1" skip="0">Tests.Logina Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

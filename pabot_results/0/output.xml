@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.11 on linux)" generated="2025-05-09T16:40:02.009795" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/ala/Documents/automation webui/internetbox 5 automation/tests">
+<suite id="s1-s1" name="Login Tests" source="/home/ala/Documents/automation webui/internetbox 5 automation/tests/login_tests.robot">
+<test id="s1-s1-t1" name="Verify Authentication with Correct Password" line="12">
+<kw name="Open Navigator" owner="CommonKeywords" type="SETUP">
+<kw name="Open Firefox With Socks Proxy" owner="FirefoxWithProxy">
+<msg time="2025-05-09T16:40:56.369378" level="INFO">${driver} = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="3a42d492-cab5-4e78-98b6-b540e928b61e")&gt;</msg>
+<var>${driver}</var>
+<arg>${HGW_URL}</arg>
+<status status="PASS" start="2025-05-09T16:40:02.342558" elapsed="54.026986"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:40:56.457683" level="INFO">Page title is 'Internet-Box'.</msg>
+<arg>${webui_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-09T16:40:56.370070" elapsed="0.087830"/>
+</kw>
+<status status="PASS" start="2025-05-09T16:40:02.340539" elapsed="54.117632"/>
+</kw>
+<kw name="Auth Wait Login Page Loaded" owner="loginKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:40:57.566086" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:40:57.566448" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:40:56.460279" elapsed="1.108162">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:00.630337" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:00.630592" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:40:59.569346" elapsed="1.061941">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:03.682536" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:03.682810" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:02.631960" elapsed="1.051539">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:06.737844" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:06.738084" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:05.684494" elapsed="1.054183">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:09.780944" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:09.781177" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:08.739187" elapsed="1.042598">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:12.830301" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:12.830604" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:11.782419" elapsed="1.049033">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:15.884824" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:15.885075" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:14.832139" elapsed="1.053791">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:18.948249" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:18.948497" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:17.886561" elapsed="1.062747">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:22.063787" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:22.064092" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:20.949986" elapsed="1.115018">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-09T16:41:24.074674" elapsed="0.043600"/>
+</kw>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-05-09T16:40:56.459429" elapsed="27.659143"/>
+</kw>
+<status status="PASS" start="2025-05-09T16:40:56.458622" elapsed="27.660193"/>
+</kw>
+<kw name="Auth Enter Password" owner="loginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${passwordTextBox}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-09T16:41:24.120279" elapsed="0.020562"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:24.141586" level="INFO">Typing password into text field 'name:login-password'.</msg>
+<msg time="2025-05-09T16:41:24.153748" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${passwordTextBox}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-09T16:41:24.141168" elapsed="0.082450"/>
+</kw>
+<arg>${webui_password}</arg>
+<status status="PASS" start="2025-05-09T16:41:24.119221" elapsed="0.104566"/>
+</kw>
+<kw name="Auth Click Login Button" owner="loginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-09T16:41:24.224545" elapsed="0.025072"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:24.250290" level="INFO">Clicking element 'xpath://*[@name="login-button"]'.</msg>
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-09T16:41:24.249907" elapsed="0.243925"/>
+</kw>
+<status status="PASS" start="2025-05-09T16:41:24.224049" elapsed="0.270254"/>
+</kw>
+<kw name="Auth Check Successful Login" owner="loginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:34.635121" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:41:34.635312" level="FAIL">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 10 seconds.</msg>
+<arg>${weakPasswordModal}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:24.495902" elapsed="10.140192">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 10 seconds.</status>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>${weakPasswordModal}</arg>
+<arg>${homePage.password.modal.title.${language}}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2025-05-09T16:41:34.636485" elapsed="0.000083"/>
+</kw>
+<arg>${language}</arg>
+<doc>Arguments : language (fr,en)</doc>
+<status status="FAIL" start="2025-05-09T16:41:24.494896" elapsed="10.141849">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 10 seconds.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-09T16:41:34.637098" elapsed="1.477345"/>
+</kw>
+<doc>Checks if authentication works with valid password</doc>
+<tag>Sanity</tag>
+<status status="FAIL" start="2025-05-09T16:40:02.338786" elapsed="93.775913">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 10 seconds.</status>
+</test>
+<test id="s1-s1-t2" name="Verify Authentication with Wrong Password" line="20">
+<kw name="Open Navigator" owner="CommonKeywords" type="SETUP">
+<kw name="Open Firefox With Socks Proxy" owner="FirefoxWithProxy">
+<msg time="2025-05-09T16:41:59.887546" level="INFO">${driver} = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="5fe03602-605a-46ed-b60b-90e59d66fb15")&gt;</msg>
+<var>${driver}</var>
+<arg>${HGW_URL}</arg>
+<status status="PASS" start="2025-05-09T16:41:36.118165" elapsed="23.769454"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:41:59.895398" level="INFO">Page title is 'Internet-Box'.</msg>
+<arg>${webui_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-09T16:41:59.887868" elapsed="0.007678"/>
+</kw>
+<status status="PASS" start="2025-05-09T16:41:36.117404" elapsed="23.778298"/>
+</kw>
+<kw name="Auth Wait Login Page Loaded" owner="loginKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:42:01.008247" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:42:01.008532" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:41:59.897082" elapsed="1.112308">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-09T16:42:04.061008" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-09T16:42:04.061315" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:42:03.010343" elapsed="1.051563">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-09T16:42:06.062662" elapsed="0.000835">Execution terminated by signal</status>
+</kw>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="FAIL" start="2025-05-09T16:41:59.896474" elapsed="6.168354">Execution terminated by signal</status>
+</kw>
+<status status="FAIL" start="2025-05-09T16:41:59.895980" elapsed="6.169158">Execution terminated by signal</status>
+</kw>
+<kw name="Auth Enter Password" owner="loginKeywords">
+<arg>${webui_wrong_password}</arg>
+<status status="NOT RUN" start="2025-05-09T16:42:06.065527" elapsed="0.000152"/>
+</kw>
+<kw name="Auth Click Login Button" owner="loginKeywords">
+<status status="NOT RUN" start="2025-05-09T16:42:06.065987" elapsed="0.000106"/>
+</kw>
+<kw name="Auth Check Successful Login" owner="loginKeywords">
+<arg>${language}</arg>
+<doc>Arguments : language (fr,en)</doc>
+<status status="NOT RUN" start="2025-05-09T16:42:06.066365" elapsed="0.000108"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-05-09T16:42:06.135278" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f7a1d212510&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5fe03602-605a-46ed-b60b-90e59d66fb15</msg>
+<msg time="2025-05-09T16:42:06.136437" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f7a1d222d10&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5fe03602-605a-46ed-b60b-90e59d66fb15</msg>
+<msg time="2025-05-09T16:42:06.145689" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f7a1d2234d0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5fe03602-605a-46ed-b60b-90e59d66fb15</msg>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-09T16:42:06.066963" elapsed="0.080403"/>
+</kw>
+<doc>Checks if authentication does not work with a wrong password</doc>
+<tag>Sanity</tag>
+<status status="FAIL" start="2025-05-09T16:41:36.116007" elapsed="30.031552">Execution terminated by signal</status>
+</test>
+<status status="FAIL" start="2025-05-09T16:40:02.068738" elapsed="124.079764"/>
+</suite>
+<status status="FAIL" start="2025-05-09T16:40:02.028310" elapsed="124.121478"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">Sanity</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="2" skip="0">Tests</stat>
+<stat name="Login Tests" id="s1-s1" pass="0" fail="2" skip="0">Tests.Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-09T16:42:06.135278" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f7a1d212510&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5fe03602-605a-46ed-b60b-90e59d66fb15</msg>
+<msg time="2025-05-09T16:42:06.136437" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f7a1d222d10&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5fe03602-605a-46ed-b60b-90e59d66fb15</msg>
+<msg time="2025-05-09T16:42:06.145689" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f7a1d2234d0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5fe03602-605a-46ed-b60b-90e59d66fb15</msg>
+</errors>
+</robot>
