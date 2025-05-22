@@ -21,7 +21,7 @@ Verify Authentication with Correct Password
     [Documentation]    Checks if authentication works with valid password
     [Tags]    Sanity
     Auth Wait Login Page Loaded
-    Auth Enter Password    ${webui_password}
+    Auth Enter Password    ${webui_strong_password}
     Auth Click Login Button
     Auth Check Successful Login    ${language}
 

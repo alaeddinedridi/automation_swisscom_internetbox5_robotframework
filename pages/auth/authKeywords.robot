@@ -19,8 +19,10 @@ Auth Click Login Button
 Auth Check Successful Login
     [Arguments]    ${language}
     [Documentation]    Check if the weak password model contains the correct message, Arguments : language (fr,en)
-    Wait Until Element Is Visible    ${weakPasswordModal}    timeout=30s
-    Element Text Should Be    ${weakPasswordModal}    ${homePage.password.modal.title.${language}}
+    run keyword if    '${webui_weak_password}'=='True'    Run Keywords
+    ...    Wait Until Element Is Visible    ${weakPasswordModal}    timeout=30s    AND
+    ...    Element Text Should Be    ${weakPasswordModal}    ${homePage.password.modal.title.${language}}
+    ...    ELSE    Wait Until Keyword Succeeds    30s    2s    Page Should Contain Element    ${overviewPageHGWElement}
 
 Auth Check Login Failure
     [Arguments]    ${language}
