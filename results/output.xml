@@ -1,123 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.11.11 on linux)" generated="2025-05-22T11:19:03.552254" rpa="false" schemaversion="5">
-<suite id="s1" name="Login Tests" source="/home/ala/Documents/automation webui/internetbox 5 automation/tests/login_tests.robot">
-<test id="s1-t1" name="Verify Language selection" line="13">
+<robot generator="Robot 7.2.2 (Python 3.11.11 on linux)" generated="2025-05-22T15:57:24.664142" rpa="false" schemaversion="5">
+<suite id="s1" name="Wifi Tests" source="/home/ala/Documents/automation webui/internetbox 5 automation/tests/wifi_tests.robot">
+<test id="s1-t1" name="Verify WLAN Credentials" line="14">
 <kw name="Open Navigator" owner="CommonKeywords" type="SETUP">
 <kw name="Open Firefox With Socks Proxy" owner="FirefoxWithProxy">
-<msg time="2025-05-22T11:19:14.205019" level="INFO">${driver} = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="00a2b82f-fe5b-4e70-a255-3d6e6f99d9c7")&gt;</msg>
+<msg time="2025-05-22T15:57:33.815353" level="INFO">${driver} = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="17d71856-0d59-4f15-9d4f-ece48f97ace8")&gt;</msg>
 <var>${driver}</var>
 <arg>${HGW_URL}</arg>
-<status status="PASS" start="2025-05-22T11:19:03.808286" elapsed="10.396860"/>
+<status status="PASS" start="2025-05-22T15:57:24.882788" elapsed="8.932726"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-05-22T11:19:14.327178" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: WebDriver session does not exist, or is not active
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
-InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:460:5
-assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:538:13
-assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:37:4
-despatch@chrome://remote/content/marionette/server.sys.mjs:315:19
-execute@chrome://remote/content/marionette/server.sys.mjs:289:16
-onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
-onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
-_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
-</msg>
-<msg time="2025-05-22T11:19:14.328283" level="FAIL">InvalidSessionIdException: Message: WebDriver session does not exist, or is not active
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
-InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:460:5
-assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:538:13
-assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:37:4
-despatch@chrome://remote/content/marionette/server.sys.mjs:315:19
-execute@chrome://remote/content/marionette/server.sys.mjs:289:16
-onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
-onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
-_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
-</msg>
+<msg time="2025-05-22T15:57:33.822090" level="INFO">Page title is 'Internet-Box'.</msg>
 <arg>${webui_title}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="FAIL" start="2025-05-22T11:19:14.205508" elapsed="0.143437">InvalidSessionIdException: Message: WebDriver session does not exist, or is not active
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
-InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:460:5
-assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:538:13
-assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:37:4
-despatch@chrome://remote/content/marionette/server.sys.mjs:315:19
-execute@chrome://remote/content/marionette/server.sys.mjs:289:16
-onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
-onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
-_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
-</status>
+<status status="PASS" start="2025-05-22T15:57:33.815953" elapsed="0.006362"/>
 </kw>
-<status status="FAIL" start="2025-05-22T11:19:03.807176" elapsed="10.542240">InvalidSessionIdException: Message: WebDriver session does not exist, or is not active
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
-InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:460:5
-assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:538:13
-assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:37:4
-despatch@chrome://remote/content/marionette/server.sys.mjs:315:19
-execute@chrome://remote/content/marionette/server.sys.mjs:289:16
-onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
-onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
-_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
-</status>
+<status status="PASS" start="2025-05-22T15:57:24.881663" elapsed="8.941532"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-22T11:19:14.352497" elapsed="0.016125"/>
-</kw>
-<doc>Checks if the language was correctly selected</doc>
-<tag>Sanity</tag>
-<status status="FAIL" start="2025-05-22T11:19:03.805825" elapsed="10.567087">Setup failed:
-InvalidSessionIdException: Message: WebDriver session does not exist, or is not active
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
-InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:460:5
-assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:538:13
-assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:37:4
-despatch@chrome://remote/content/marionette/server.sys.mjs:315:19
-execute@chrome://remote/content/marionette/server.sys.mjs:289:16
-onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
-onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
-_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
-</status>
-</test>
-<test id="s1-t2" name="Verify Authentication with Correct Password" line="20">
-<kw name="Open Navigator" owner="CommonKeywords" type="SETUP">
-<kw name="Open Firefox With Socks Proxy" owner="FirefoxWithProxy">
-<msg time="2025-05-22T11:19:37.412575" level="INFO">${driver} = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="d8515e76-abe9-4b87-bdcb-277456440557")&gt;</msg>
-<var>${driver}</var>
-<arg>${HGW_URL}</arg>
-<status status="PASS" start="2025-05-22T11:19:14.376085" elapsed="23.036643"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-05-22T11:19:37.428838" level="INFO">Page title is 'Internet-Box'.</msg>
-<arg>${webui_title}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-05-22T11:19:37.413207" elapsed="0.015865"/>
-</kw>
-<status status="PASS" start="2025-05-22T11:19:14.375060" elapsed="23.054272"/>
-</kw>
+<kw name="Login to App" owner="CommonKeywords">
 <kw name="Auth Wait Login Page Loaded" owner="authKeywords">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2025-05-22T11:19:38.524457" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-154.png"&gt;&lt;img src="selenium-screenshot-154.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-05-22T11:19:38.524837" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<msg time="2025-05-22T15:57:35.028832" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-213.png"&gt;&lt;img src="selenium-screenshot-213.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-22T15:57:35.029244" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
 <arg>${passwordTextBox}</arg>
 <arg>timeout=1s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2025-05-22T11:19:37.431540" elapsed="1.094709">Element 'name:login-password' not visible after 1 second.</status>
+<status status="FAIL" start="2025-05-22T15:57:33.827484" elapsed="1.203598">Element 'name:login-password' not visible after 1 second.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-22T15:57:38.094567" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-214.png"&gt;&lt;img src="selenium-screenshot-214.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-22T15:57:38.095043" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-22T15:57:37.032160" elapsed="1.063928">Element 'name:login-password' not visible after 1 second.</status>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${passwordTextBox}</arg>
 <arg>timeout=1s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-22T11:19:40.526971" elapsed="0.890428"/>
+<status status="PASS" start="2025-05-22T15:57:40.096845" elapsed="0.029839"/>
 </kw>
 <arg>30s</arg>
 <arg>2s</arg>
@@ -125,63 +48,79 @@ _onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494
 <arg>${passwordTextBox}</arg>
 <arg>timeout=1s</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-05-22T11:19:37.430761" elapsed="3.987041"/>
+<status status="PASS" start="2025-05-22T15:57:33.826184" elapsed="6.300648"/>
 </kw>
-<status status="PASS" start="2025-05-22T11:19:37.429955" elapsed="3.990574"/>
+<status status="PASS" start="2025-05-22T15:57:33.824895" elapsed="6.302072"/>
 </kw>
 <kw name="Auth Enter Password" owner="authKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${passwordTextBox}</arg>
 <arg>timeout=30s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-22T11:19:41.422268" elapsed="0.068789"/>
+<status status="PASS" start="2025-05-22T15:57:40.127752" elapsed="0.019347"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-05-22T11:19:41.491987" level="INFO">Typing password into text field 'name:login-password'.</msg>
-<msg time="2025-05-22T11:19:41.524519" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-05-22T15:57:40.147874" level="INFO">Typing password into text field 'name:login-password'.</msg>
+<msg time="2025-05-22T15:57:40.161884" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${passwordTextBox}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-22T11:19:41.491457" elapsed="0.195586"/>
+<status status="PASS" start="2025-05-22T15:57:40.147453" elapsed="0.095463"/>
 </kw>
 <arg>${webui_strong_password}</arg>
-<status status="PASS" start="2025-05-22T11:19:41.421279" elapsed="0.266024"/>
+<status status="PASS" start="2025-05-22T15:57:40.127252" elapsed="0.115862"/>
 </kw>
 <kw name="Auth Click Login Button" owner="authKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${loginButton}</arg>
 <arg>timeout=30s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-22T11:19:41.689297" elapsed="0.038857"/>
+<status status="PASS" start="2025-05-22T15:57:40.243966" elapsed="0.021336"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-22T11:19:41.729080" level="INFO">Clicking element 'xpath://*[@name="login-button"]'.</msg>
+<msg time="2025-05-22T15:57:40.265990" level="INFO">Clicking element 'xpath://*[@name="login-button"]'.</msg>
 <arg>${loginButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-22T11:19:41.728562" elapsed="0.243673"/>
+<status status="PASS" start="2025-05-22T15:57:40.265615" elapsed="0.239271"/>
 </kw>
-<status status="PASS" start="2025-05-22T11:19:41.688627" elapsed="0.283948"/>
+<status status="PASS" start="2025-05-22T15:57:40.243502" elapsed="0.261805"/>
 </kw>
 <kw name="Auth Check Successful Login" owner="authKeywords">
 <kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Run Keywords" owner="BuiltIn">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2025-05-22T11:20:12.068693" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-155.png"&gt;&lt;img src="selenium-screenshot-155.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-05-22T11:20:12.068942" level="FAIL">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 30 seconds.</msg>
-<arg>${weakPasswordModal}</arg>
-<arg>timeout=30s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2025-05-22T11:19:41.977992" elapsed="30.091604">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 30 seconds.</status>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T15:57:40.667859" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-215.png"&gt;&lt;img src="selenium-screenshot-215.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-22T15:57:40.668258" level="FAIL">Page should have contained element 'xpath://*[@data-type='gateway']' but did not.</msg>
+<arg>${overviewPageHGWElement}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="FAIL" start="2025-05-22T15:57:40.509162" elapsed="0.160913">Page should have contained element 'xpath://*[@data-type='gateway']' but did not.</status>
 </kw>
-<arg>Wait Until Element Is Visible</arg>
-<arg>${weakPasswordModal}</arg>
-<arg>timeout=30s</arg>
-<arg>AND</arg>
-<arg>Element Text Should Be</arg>
-<arg>${weakPasswordModal}</arg>
-<arg>${homePage.password.modal.title.${language}}</arg>
-<doc>Executes all the given keywords in a sequence.</doc>
-<status status="FAIL" start="2025-05-22T11:19:41.976483" elapsed="30.093278">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 30 seconds.</status>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T15:57:42.836751" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-216.png"&gt;&lt;img src="selenium-screenshot-216.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-22T15:57:42.837042" level="FAIL">Page should have contained element 'xpath://*[@data-type='gateway']' but did not.</msg>
+<arg>${overviewPageHGWElement}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="FAIL" start="2025-05-22T15:57:42.670770" elapsed="0.166938">Page should have contained element 'xpath://*[@data-type='gateway']' but did not.</status>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T15:57:45.143012" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-217.png"&gt;&lt;img src="selenium-screenshot-217.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-22T15:57:45.143261" level="FAIL">Page should have contained element 'xpath://*[@data-type='gateway']' but did not.</msg>
+<arg>${overviewPageHGWElement}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="FAIL" start="2025-05-22T15:57:44.838378" elapsed="0.311154">Page should have contained element 'xpath://*[@data-type='gateway']' but did not.</status>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T15:57:47.158948" level="INFO">Current page contains element 'xpath://*[@data-type='gateway']'.</msg>
+<arg>${overviewPageHGWElement}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-22T15:57:47.150289" elapsed="0.008829"/>
+</kw>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${overviewPageHGWElement}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-05-22T15:57:40.508488" elapsed="6.650779"/>
 </kw>
 <arg>'${webui_weak_password}'=='True'</arg>
 <arg>Run Keywords</arg>
@@ -191,7 +130,7 @@ _onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494
 <arg>AND</arg>
 <arg>Element Text Should Be</arg>
 <arg>${weakPasswordModal}</arg>
-<arg>${homePage.password.modal.title.${language}}</arg>
+<arg>${loginPage.password.modal.title.${language}}</arg>
 <arg>ELSE</arg>
 <arg>Wait Until Keyword Succeeds</arg>
 <arg>30s</arg>
@@ -199,147 +138,123 @@ _onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494
 <arg>Page Should Contain Element</arg>
 <arg>${overviewPageHGWElement}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="FAIL" start="2025-05-22T11:19:41.974964" elapsed="30.094898">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 30 seconds.</status>
+<status status="PASS" start="2025-05-22T15:57:40.507386" elapsed="6.652082"/>
 </kw>
 <arg>${language}</arg>
 <doc>Check if the weak password model contains the correct message, Arguments : language (fr,en)</doc>
-<status status="FAIL" start="2025-05-22T11:19:41.973442" elapsed="30.096624">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 30 seconds.</status>
+<status status="PASS" start="2025-05-22T15:57:40.506010" elapsed="6.653906"/>
+</kw>
+<doc>Login to the application</doc>
+<status status="PASS" start="2025-05-22T15:57:33.823939" elapsed="13.336163"/>
+</kw>
+<kw name="Toggle Expert Mode" owner="CommonKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${expertModeSwitcher}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-22T15:57:47.161507" elapsed="0.017796"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T15:57:47.179956" level="INFO">Clicking element 'xpath://*[@id='user-mode-switcher']/div[contains(@class, 'switcher-container')]'.</msg>
+<arg>${expertModeSwitcher}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T15:57:47.179618" elapsed="0.287293"/>
+</kw>
+<status status="PASS" start="2025-05-22T15:57:47.160747" elapsed="0.306476"/>
+</kw>
+<kw name="Navigate To Wifi Settings" owner="wifiKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${wifiNavigationItem}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-22T15:57:47.468966" elapsed="0.023137"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T15:57:47.493499" level="INFO">Clicking element 'xpath://*[@id='navigation-menu']/li[contains(@class, "menu-wifi")]'.</msg>
+<arg>${wifiNavigationItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T15:57:47.493105" elapsed="0.047060"/>
+</kw>
+<status status="PASS" start="2025-05-22T15:57:47.468442" elapsed="0.072013"/>
+</kw>
+<kw name="Wifi Enter SSID" owner="wifiKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${wifiSSIDField}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-22T15:57:47.542594" elapsed="1.427284"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T15:57:48.970881" level="INFO">Typing text 'Internet-Box_2.4GHz' into text field 'xpath://*[contains(@class, 'input-container')]/input[@name='ssid']'.</msg>
+<arg>${wifiSSIDField}</arg>
+<arg>${wifi_SSID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T15:57:48.970309" elapsed="0.626252"/>
+</kw>
+<arg>${wifi_SSID}</arg>
+<status status="PASS" start="2025-05-22T15:57:47.541448" elapsed="2.055364"/>
+</kw>
+<kw name="Wifi Enter Password" owner="wifiKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${wifiPasswordField}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-22T15:57:49.598814" elapsed="0.064542"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-22T15:57:49.664099" level="INFO">Typing password into text field 'xpath://*[contains(@class, 'input-container')]/input[@name='password']'.</msg>
+<msg time="2025-05-22T15:57:49.761576" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${wifiPasswordField}</arg>
+<arg>${wifi_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T15:57:49.663706" elapsed="0.331042"/>
+</kw>
+<arg>${wifi_Password}</arg>
+<status status="PASS" start="2025-05-22T15:57:49.597964" elapsed="0.396986"/>
+</kw>
+<kw name="Wifi Set Encryption" owner="wifiKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${wifiEncMenu}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-22T15:57:49.996007" elapsed="0.029890"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T15:57:50.026750" level="INFO">Clicking element 'xpath://*[contains(@class, 'encryption-selection')]/div[contains(@class, 'selected-option')]'.</msg>
+<arg>${wifiEncMenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T15:57:50.026292" elapsed="0.275517"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T15:57:50.302496" level="INFO">Clicking element 'xpath://*[contains(@class, 'options')]/li[@data-value='WPA3-Personal']/span'.</msg>
+<arg>${wifiEncItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T15:57:50.302175" elapsed="0.285555"/>
+</kw>
+<status status="PASS" start="2025-05-22T15:57:49.995351" elapsed="0.592706"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-22T11:20:12.070502" elapsed="1.290479"/>
+<status status="PASS" start="2025-05-22T15:57:50.588922" elapsed="1.398058"/>
 </kw>
 <doc>Checks if authentication works with valid password</doc>
 <tag>Sanity</tag>
-<status status="FAIL" start="2025-05-22T11:19:14.373765" elapsed="58.987484">Element 'xpath://*[contains(@class, 'modalWindowInner')]/div/span' not visible after 30 seconds.</status>
+<status status="PASS" start="2025-05-22T15:57:24.880350" elapsed="27.106919"/>
 </test>
-<test id="s1-t3" name="Verify Authentication with Wrong Password" line="28">
-<kw name="Open Navigator" owner="CommonKeywords" type="SETUP">
-<kw name="Open Firefox With Socks Proxy" owner="FirefoxWithProxy">
-<msg time="2025-05-22T11:20:18.919102" level="INFO">${driver} = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="20f6616a-c44a-4c75-945e-762a581725f1")&gt;</msg>
-<var>${driver}</var>
-<arg>${HGW_URL}</arg>
-<status status="PASS" start="2025-05-22T11:20:13.364109" elapsed="5.555081"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-05-22T11:20:18.927079" level="INFO">Page title is 'Internet-Box'.</msg>
-<arg>${webui_title}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-05-22T11:20:18.919516" elapsed="0.007712"/>
-</kw>
-<status status="PASS" start="2025-05-22T11:20:13.363398" elapsed="5.563972"/>
-</kw>
-<kw name="Auth Wait Login Page Loaded" owner="authKeywords">
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2025-05-22T11:20:20.018571" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-156.png"&gt;&lt;img src="selenium-screenshot-156.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-05-22T11:20:20.018854" level="FAIL">Element 'name:login-password' not visible after 1 second.</msg>
-<arg>${passwordTextBox}</arg>
-<arg>timeout=1s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2025-05-22T11:20:18.928821" elapsed="1.090796">Element 'name:login-password' not visible after 1 second.</status>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${passwordTextBox}</arg>
-<arg>timeout=1s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-22T11:20:22.020269" elapsed="0.030581"/>
-</kw>
-<arg>30s</arg>
-<arg>2s</arg>
-<arg>Wait Until Element Is Visible</arg>
-<arg>${passwordTextBox}</arg>
-<arg>timeout=1s</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-05-22T11:20:18.928292" elapsed="3.122730"/>
-</kw>
-<status status="PASS" start="2025-05-22T11:20:18.927765" elapsed="3.123467"/>
-</kw>
-<kw name="Auth Enter Password" owner="authKeywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${passwordTextBox}</arg>
-<arg>timeout=30s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-22T11:20:22.052276" elapsed="0.017553"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-05-22T11:20:22.070476" level="INFO">Typing password into text field 'name:login-password'.</msg>
-<msg time="2025-05-22T11:20:22.083838" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${passwordTextBox}</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-22T11:20:22.070107" elapsed="0.089059"/>
-</kw>
-<arg>${webui_wrong_password}</arg>
-<status status="PASS" start="2025-05-22T11:20:22.051650" elapsed="0.107689"/>
-</kw>
-<kw name="Auth Click Login Button" owner="authKeywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${loginButton}</arg>
-<arg>timeout=30s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-22T11:20:22.160436" elapsed="0.018538"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-22T11:20:22.179697" level="INFO">Clicking element 'xpath://*[@name="login-button"]'.</msg>
-<arg>${loginButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-22T11:20:22.179266" elapsed="0.235642"/>
-</kw>
-<status status="PASS" start="2025-05-22T11:20:22.159838" elapsed="0.255678"/>
-</kw>
-<kw name="Auth Check Login Failure" owner="authKeywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${loginFailureMsg}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-22T11:20:22.416859" elapsed="0.025892"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-05-22T11:20:22.443548" level="INFO">Verifying element 'xpath://*[contains(@class, 'info-messages')]/div[2]/span' contains exact text 'Le Login est erroné. Veuillez vérifier les données saisies.'.</msg>
-<arg>${loginFailureMsg}</arg>
-<arg>${homePage.login.password.failure.message.${language}}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-05-22T11:20:22.443068" elapsed="0.020226"/>
-</kw>
-<arg>${language}</arg>
-<doc>Check the displayed error message in case of a wrong password, Arguments : language (fr,en)</doc>
-<status status="PASS" start="2025-05-22T11:20:22.416074" elapsed="0.047446"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-22T11:20:22.464177" elapsed="2.054916"/>
-</kw>
-<doc>Checks if authentication does not work with a wrong password</doc>
-<tag>Sanity</tag>
-<status status="PASS" start="2025-05-22T11:20:13.362154" elapsed="11.157216"/>
-</test>
-<status status="FAIL" start="2025-05-22T11:19:03.553635" elapsed="80.966899"/>
+<status status="PASS" start="2025-05-22T15:57:24.667063" elapsed="27.321319"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="2" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="2" skip="0">Sanity</stat>
+<stat pass="1" fail="0" skip="0">Sanity</stat>
 </tag>
 <suite>
-<stat name="Login Tests" id="s1" pass="1" fail="2" skip="0">Login Tests</stat>
+<stat name="Wifi Tests" id="s1" pass="1" fail="0" skip="0">Wifi Tests</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-05-22T11:19:14.327178" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: WebDriver session does not exist, or is not active
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
-InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:460:5
-assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:538:13
-assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:37:4
-despatch@chrome://remote/content/marionette/server.sys.mjs:315:19
-execute@chrome://remote/content/marionette/server.sys.mjs:289:16
-onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
-onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
-_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
-</msg>
+<msg time="2025-05-22T15:57:24.856400" level="WARN">Imported resource file '/home/ala/Documents/automation webui/internetbox 5 automation/pages/wifi/wifiTextLangs.robot' is empty.</msg>
 </errors>
 </robot>

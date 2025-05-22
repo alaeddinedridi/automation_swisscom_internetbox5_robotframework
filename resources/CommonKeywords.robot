@@ -3,18 +3,32 @@ Library    ../utils/FirefoxWithProxy.py
 Library    SeleniumLibrary
 Library    OperatingSystem
 Resource    ../config/config.robot
+Resource    ../pages/auth/authKeywords.robot
 
 *** Variables ***
 
 ${languagesMenu}        xpath://*[contains(@class, 'selected-option')]
 ${languageItem}        xpath://*[contains(@class, 'options')]/li/span[contains(text(),${language})]
 ${selectedLanguage}        xpath://*[contains(@class, 'selected-option')]/span
+${expertModeSwitcher}        xpath://*[@id='user-mode-switcher']/div[contains(@class, 'switcher-container')]
 
 *** Keywords ***
 
 Open Navigator
     ${driver}=    Open Firefox With Socks Proxy    ${HGW_URL}
     Title Should Be    ${webui_title}
+
+Toggle Expert Mode
+    Wait Until Element Is Visible    ${expertModeSwitcher}    timeout=30s
+    Click Element    ${expertModeSwitcher}
+
+Login to App
+    [Documentation]    Login to the application
+    Auth Wait Login Page Loaded
+    Auth Enter Password    ${webui_strong_password}
+    Auth Click Login Button
+    Auth Check Successful Login    ${language}
+
 
 Capture Custom Screenshot
     ${screenshot_path}=    Set Variable    results/screenshots/${TEST NAME}.png
