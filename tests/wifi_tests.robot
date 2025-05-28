@@ -13,7 +13,7 @@ Test Teardown     Close Browser
 
 Verify WLAN Credentials
     [Documentation]    Checks if authentication works with valid password
-    [Tags]    Sanity
+    [Tags]    notSanity
     Login to App
     Toggle Expert Mode
     Navigate To Wifi Settings

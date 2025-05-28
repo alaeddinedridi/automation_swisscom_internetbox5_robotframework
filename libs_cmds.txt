@@ -50,3 +50,25 @@ docker rm -f selenium-hub chrome-node
 
 list containers:
 docker ps
+
+
+
+
+// setup testlink
+
+
+/opt/lampp/htdocs
+
+
+
+databse name: testlink
+Database admin login: testlink_admin
+Database admin password: test@1234
+
+TestLink DB login: testlink_user
+TestLink DB password: test@1234
+
+login name: admin
+password : admin
+
+

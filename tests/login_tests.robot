@@ -12,14 +12,14 @@ Test Teardown     Close Browser
 
 Verify Language selection
     [Documentation]    Checks if the language was correctly selected
-    [Tags]    Sanity
+    [Tags]    notsanity
     Auth Wait Login Page Loaded
     Select Language
     Check Language Correctly Selected    ${language}
     
 Verify Authentication with Correct Password
     [Documentation]    Checks if authentication works with valid password
-    [Tags]    Sanity
+    [Tags]    Sanity    TC-1
     Auth Wait Login Page Loaded
     Auth Enter Password    ${webui_strong_password}
     Auth Click Login Button
@@ -27,7 +27,7 @@ Verify Authentication with Correct Password
 
 Verify Authentication with Wrong Password
     [Documentation]    Checks if authentication does not work with a wrong password
-    [Tags]    Sanity
+    [Tags]    Sanity    TC-2
     Auth Wait Login Page Loaded
     Auth Enter Password    ${webui_wrong_password}
     Auth Click Login Button
