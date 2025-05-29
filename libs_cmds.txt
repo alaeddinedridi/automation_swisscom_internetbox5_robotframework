@@ -1,3 +1,8 @@
+----- Robot framework -----
+
+python version: Python 3.11.11
+
+
 ----- Robotframework libraries -----
 
 pip install robotframework
