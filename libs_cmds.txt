@@ -4,7 +4,7 @@ pip install robotframework
 pip install robotframework-seleniumlibrary
 pip install robotframework-browser
 pip install robotframework-pabot
-
+pip install TestLink-API-Python-client
 
 
 
@@ -24,7 +24,11 @@ run parallel tests that are with tag sanity: pabot --outputdir results --process
 
 only run tests with tag sanity: robot --outputdir results --include sanity ./tests/
 
+
+
+
 ----- Docker - selenium hub -----
+
 
 Start the hub:
 
@@ -54,26 +58,60 @@ docker ps
 
 
 
-// setup testlink
+----- Setup testlink -----
+
+Precondition: make sure you have xampp installed and running
+
+download it from here: https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/7.4.33/
+install it : sudo ./xampp-linux-x64-7.4.33-0-installer.run
+run it : sudo /opt/lampp/./manager-linux-x64.run
+
+check php version: /opt/lampp/bin/php -v
+
+i'm using: PHP 7.4.33
+
+check mysql version: /opt/lampp/bin/mysql --version
+
+i'm using: 10.4.27-MariaDB
 
 
-/opt/lampp/htdocs
+1) go to https://testlink.org/ and download testlink stable version 1.9.20
 
 
+2) copy testlink folder to put it under /opt/lampp/htdocs
 
-databse name: testlink
-Database admin login: testlink_admin
-Database admin password: test@1234
+3) give permissions to the testlink folder: 
+sudo chown -R daemon:daemon /opt/lampp/htdocs/testlink
+sudo chmod -R 777 /opt/lampp/htdocs/testlink
+
+4) to start installation, go to http://localhost/testlink
+
+hostname: localhost:theApachePort
+database name: testlink
+Database admin login: root
+Database admin password: 
 
 TestLink DB login: testlink_user
-TestLink DB password: test@1234
+TestLink DB password: test1234
 
 login name: admin
 password : admin
 
+5) after the installation is successfully done, and you can check that by making sure testlink database was created and tables inside of it were created then you can login to testlink: http://localhost/testlink with using: admin/admin
 
+6) Create test plan, create test suites and test cases, create build name, then add the test cases to the test plan
 
-run script to inject results into testlink: 
+7) in test scripts, i set the test case name from testlink as tag in the corresponding test case
+
+8) get api key from testlink settings and put it in the testlink utils script
+
+9) also put this url in the testlink utils script: http://localhost:8090/testlink/lib/api/xmlrpc/v1/xmlrpc.php
+but make sure in your case you use this part to access to testlink : http://localhost:8090/testlink
+to make sure that url works, try to access it using a browser
+
+10) run your tests
+
+11) then run this script to inject results into testlink:
 
 python utils/exportToTestlink.py --project "Swisscom_InternetBox5" --plan "Sanity" --build "Sanity-test-build" 
 
