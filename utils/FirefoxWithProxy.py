@@ -15,6 +15,7 @@ class FirefoxWithProxy:
 
         options = FirefoxOptions()
         options.profile = profile
+        options.binary_location = "/opt/firefox115/firefox"
         options.add_argument('--headless')
         driver = webdriver.Firefox(options=options)
 
