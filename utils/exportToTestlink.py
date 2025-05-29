@@ -25,11 +25,11 @@ def parseRport(report):
 
 
 def injectResultsInTestlink():
-    # Your TestLink config
-    SERVER_URL = "http://localhost:8090/testlink/lib/api/xmlrpc/v1/xmlrpc.php"
-    DEV_KEY = "441742750ba0c2ebd7279f0eb7338ab2"
+    # TestLink config
+    server_url = "http://localhost:8090/testlink/lib/api/xmlrpc/v1/xmlrpc.php"
+    dev_key = "441742750ba0c2ebd7279f0eb7338ab2"
 
-    tlc = TestlinkAPIClient(SERVER_URL, DEV_KEY)
+    tlc = TestlinkAPIClient(server_url, dev_key)
 
     test_plan = "Swisscom_InternetBox5"
     project_name = "Sanity"
