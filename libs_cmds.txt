@@ -72,3 +72,9 @@ login name: admin
 password : admin
 
 
+
+run script to inject results into testlink: 
+
+python utils/exportToTestlink.py --project "Swisscom_InternetBox5" --plan "Sanity" --build "Sanity-test-build" 
+
+

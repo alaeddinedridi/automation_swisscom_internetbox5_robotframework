@@ -1,6 +1,12 @@
 from testlink.testlinkapi import TestlinkAPIClient
 import xml.etree.ElementTree as ET
+import argparse
 
+parser = argparse.ArgumentParser()
+parser.add_argument('--project', required=True)
+parser.add_argument('--plan', required=True)
+parser.add_argument('--build', required=True)
+args = parser.parse_args()
 
 def parseRport(report):
     # Load and parse the XML file
@@ -24,18 +30,15 @@ def parseRport(report):
     return results
 
 
-def injectResultsInTestlink():
+def injectResultsInTestlink(project_name,test_plan,build):
     # TestLink config
     server_url = "http://localhost:8090/testlink/lib/api/xmlrpc/v1/xmlrpc.php"
     dev_key = "441742750ba0c2ebd7279f0eb7338ab2"
 
     tlc = TestlinkAPIClient(server_url, dev_key)
 
-    test_plan = "Swisscom_InternetBox5"
-    project_name = "Sanity"
-    build = "Sanity-test-build"
 
-    testplan=tlc.getTestPlanByName(test_plan, project_name)
+    testplan=tlc.getTestPlanByName(project_name, test_plan)
 
     results= parseRport("results/output.xml")
     print(results)
@@ -73,4 +76,4 @@ def injectResultsInTestlink():
 
 
 
-injectResultsInTestlink()
+injectResultsInTestlink(args.project,args.plan,args.build)
