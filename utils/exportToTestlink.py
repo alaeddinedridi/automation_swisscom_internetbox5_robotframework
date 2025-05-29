@@ -1,23 +1,76 @@
 from testlink.testlinkapi import TestlinkAPIClient
+import xml.etree.ElementTree as ET
 
-# Your TestLink config
-SERVER_URL = "http://localhost:8090/testlink/lib/api/xmlrpc/v1/xmlrpc.php"
-DEV_KEY = "441742750ba0c2ebd7279f0eb7338ab2"
 
-tlc = TestlinkAPIClient(SERVER_URL, DEV_KEY)
+def parseRport(report):
+    # Load and parse the XML file
+    tree = ET.parse(report)
+    root = tree.getroot()
 
-test_plan = "Swisscom_InternetBox5"
-project_name = "Sanity"
-build = "Sanity-test-build"
-external_id = "TC-1"
-result = "p"  # use "p" for pass, "f" for fail
+    # Find the <tag> section under <statistics>
+    tag_stats = root.find(".//statistics/tag")
+    results=[]
+    # Extract and print each tag's stats
+    for stat in tag_stats.findall("stat"):
+        name = stat.text
+        if "TC-" not in name:
+            continue
+        passed = stat.attrib.get("pass")
+        failed = stat.attrib.get("fail")
+        skipped = stat.attrib.get("skip")
+        print(f"Tag: {name}, Pass: {passed}, Fail: {failed}, Skip: {skipped}")
+        results.append({"name":name, "passed":passed, "failed":failed, "skipped":skipped})
+        print("Results parsing done")
+    return results
 
-testplan=tlc.getTestPlanByName(test_plan, project_name)
 
-tlc.reportTCResult(
-    testplanid = testplan[0]['id'],  # Access first item in the list, then get the ID
-    testcaseexternalid=external_id,
-    buildname=build,
-    status=result,  # "P" or "F"
-    notes="Reported from Robot Framework"
-)
+def injectResultsInTestlink():
+    # Your TestLink config
+    SERVER_URL = "http://localhost:8090/testlink/lib/api/xmlrpc/v1/xmlrpc.php"
+    DEV_KEY = "441742750ba0c2ebd7279f0eb7338ab2"
+
+    tlc = TestlinkAPIClient(SERVER_URL, DEV_KEY)
+
+    test_plan = "Swisscom_InternetBox5"
+    project_name = "Sanity"
+    build = "Sanity-test-build"
+
+    testplan=tlc.getTestPlanByName(test_plan, project_name)
+
+    results= parseRport("results/output.xml")
+    print(results)
+
+    for result in results:
+        res="f"
+        external_id = result["name"]
+
+        passed=int(result["passed"])
+        failed=int(result["failed"])
+        skipped=int(result["skipped"])
+
+        print("set the test result")
+        if passed != 0 and failed == 0 and skipped == 0:
+            print("passed")
+            res = "p"  # use "p" for pass, "f" for fail
+        elif passed == 0 and failed != 0 and skipped == 0:
+            print("failed")
+            res = "f"
+        elif passed == 0 and failed == 0 and skipped != 0:
+            print("skipped")
+            res = "s"
+        else:
+            print("error in parsing test results")
+
+        print("done with setting the final result")
+        print(res)
+        tlc.reportTCResult(
+            testplanid=testplan[0]['id'],  # Access first item in the list, then get the ID
+            testcaseexternalid=external_id,
+            buildname=build,
+            status=res,  # "P" or "F"
+            notes="Automated test executed with Robot Framework"
+        )
+
+
+
+injectResultsInTestlink()
