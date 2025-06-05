@@ -260,6 +260,18 @@ my current account: admin - admin1234
 if you want to change jenkins port:
 sudo gedit /etc/default/jenkins
 put the new port here: HTTP_PORT=9070
+then run: sudo systemctl restart jenkins
+if the new port is not set then you need to add it here: sudo systemctl edit jenkins
+[Service]
+Environment="JENKINS_PORT=9070"
+then run: sudo systemctl restart jenkins
+
+
+if you are not able to open .html files(reports) in jenkins:
+go to manage jenkins, then script console and run this:
+ System.setProperty("hudson.model.DirectoryBrowserSupport.CSP","sandbox allow-scripts; default-src 'none'; img-src 'self' data: ; style-src 'self' 'unsafe-inline' data: ; script-src 'self' 'unsafe-inline' 'unsafe-eval' ;")
+ 
+but if you restart jenkins then you will need to execute it again
 
 
 // Configure JAVA_HOME on Ubuntu
@@ -278,6 +290,6 @@ and put the location of java : JAVA_HOME="/usr/lib/jvm/jdk-17-oracle-x64/bin/jav
 
 // jenkins plugins
 
-Maven Integration plugin: to be able to build a maven project
 robot framework
-Cucumber reports : generate a cucumber html report
+
+
