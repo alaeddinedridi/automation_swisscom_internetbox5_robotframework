@@ -3,7 +3,7 @@ Library    ../utils/FirefoxWithProxy.py
 Library    SeleniumLibrary
 Library    OperatingSystem
 Resource    ../config/config.robot
-Resource    ../pages/auth/authKeywords.robot
+Resource    ../pages/authPage.robot
 
 *** Variables ***
 

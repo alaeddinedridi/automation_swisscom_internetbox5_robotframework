@@ -232,3 +232,52 @@ sudo rm -rf /opt/jira-home/caches
 sudo rm -rf /opt/jira-home/indexes
 
 and visit: http://localhost:8080
+
+
+
+
+
+
+----- Setup jenkins -----
+
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update
+sudo apt install jenkins
+
+or download the .war file and install it like this: java -jar jenkins.war
+
+
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+
+access to jenkins: http://localhost:8080/
+
+the password is here: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+my current account: admin - admin1234
+
+if you want to change jenkins port:
+sudo gedit /etc/default/jenkins
+put the new port here: HTTP_PORT=9070
+
+
+// Configure JAVA_HOME on Ubuntu
+
+* locate java installation: update-alternatives --config java
+
+* Add JAVA_HOME to the environment:
+
+sudo nano /etc/environment
+and put the location of java : JAVA_HOME="/usr/lib/jvm/jdk-17-oracle-x64/bin/java"
+
+* reload the environment configuration file: source /etc/environment
+
+* check if the env variable is set : echo $JAVA_HOME
+
+
+// jenkins plugins
+
+Maven Integration plugin: to be able to build a maven project
+robot framework
+Cucumber reports : generate a cucumber html report
