@@ -1,7 +1,7 @@
 *** Settings ***
 #Metadata       Spec Version used        ${spec_version}
 
-Resource    ../pages/auth/authKeywords.robot
+Resource    ../pages/authPage.robot
 Resource    ../resources/CommonKeywords.robot
 Resource    ../config/config.robot
 

@@ -120,4 +120,115 @@ to make sure that url works, try to access it using a browser
 
 python utils/exportToTestlink.py --project "Swisscom_InternetBox5" --plan "Sanity" --build "Sanity-test-build" 
 
+12) Now if we have failed tests, then we have to link bug tickets to them, so we need a defect management system, in our case (Jira)
+So we have to setup jira
 
+13) Go to testlink: http://localhost:8090/testlink/index.php
+Click on issue tracker management, then create an issue tracker
+Type: jira (interface: rest)
+Configuration:
+
+<issuetracker>
+  <username>aladdindridi</username>
+  <password>test1234</password>
+  <uribase>http://localhost:8080/</uribase>
+  <uriapi>http://localhost:8080/rest/api/latest/</uriapi>
+  <uriview>http://localhost:8080/browse/</uriview>
+
+  <!-- 1 enables dropdowns for types, priorities, versions, etc. -->
+  <userinteraction>1</userinteraction>
+
+  <!-- Creating issues in this Jira project -->
+  <projectkey>HSC</projectkey>
+
+  <!-- Use issue type name like 'Bug' or the numeric ID -->
+  <issuetype>Bug</issuetype>
+
+  <!-- Priority (e.g., High, Medium, Low or ID like 3) -->
+  <issuepriority>Medium</issuepriority>
+
+</issuetracker>
+
+Then test connection to check if it's connected to jira, btw our jira url is : http://localhost:8080/
+note: username and password are the credentials i use to connect to my jira account
+
+14) go to http://localhost:8090/testlink/index.php
+Click on Test Project Management, then click on the project, choose your issue tracker that you just created and activate it!! then save
+
+15) Go to test execution then to the failed test, you should see an icon to link an existing issue / create issue
+
+16) if you click on link existing issue and you get an error then run these commands:
+
+cd /opt/lampp/htdocs/testlink/gui
+sudo chown -R daemon:daemon templates_c
+sudo chmod -R 755 templates_c
+
+17) try again, it should work, put the ID of the bug ticket and click save
+
+
+
+----- Setup jira -----
+
+1) Install java jdk17, check which version you have with these commands:
+java -version
+sudo update-alternatives --config java
+
+2) Create jira user: sudo adduser --system --home /opt/jira --shell /bin/bash jira
+
+3) install postgresSQL:
+sudo apt install postgresql postgresql-contrib -y
+sudo -u postgres createuser -P jirauser
+sudo -u postgres createdb -O jirauser jiradb
+
+4) sudo -u postgres psql
+ALTER ROLE jirauser WITH LOGIN;
+\q
+
+5) Download and extract jira: 
+cd /opt
+sudo wget https://product-downloads.atlassian.com/software/jira/downloads/atlassian-jira-software-9.15.0.tar.gz
+sudo tar -zxvf atlassian-jira-software-9.15.0.tar.gz
+sudo mv atlassian-jira-software-9.15.0-standalone /opt/jira/jira-software
+
+6) set environment variables: sudo gedit /etc/environment
+JAVA_HOME="/usr/lib/jvm/jdk-17-oracle-x64"
+JIRA_HOME="/opt/jira/home"
+and reload the system path using: ". /etc/environment" or "source /etc/environment"
+to check if it was applied: echo $JAVA_HOME
+
+7) Create the home directory for jira
+sudo groupadd jira
+sudo usermod -g jira jira
+
+sudo mkdir /opt/jira/home
+sudo chown -R jira:jira /opt/jira/home
+
+8) Install Jira: 
+cd /opt/jira/jira-software/bin
+sudo ./start-jira.sh
+
+and visit: http://localhost:8080
+
+9) database info to put while configuring jira:
+choose to configure jira by yourself without internet connection then select "my own database"
+Database type: PostgresSQL
+Hostname: localhost
+DB name: jiradb
+Username: jirauser
+Password: your set password (in my case: test1234)
+
+and check if postgresSQL is working : sudo systemctl status postgresql
+
+Project: HGW Swisscom
+Key: HSC
+
+10) stop jira
+sudo ./stop-jira.sh
+
+11) in case you want to reset jira and reconfigure it:
+sudo rm /opt/jira-home/dbconfig.xml
+sudo rm -rf /opt/jira-home/plugins
+sudo rm -rf /opt/jira-home/caches
+sudo rm -rf /opt/jira-home/indexes
+
+and visit: http://localhost:8080
