@@ -1,7 +1,7 @@
 *** Settings ***
 
 Library    SeleniumLibrary
-Resource    ../../config/config.robot
+Resource    ../config/config.robot
 Resource    ../config/textLangTranslation.robot
 
 
