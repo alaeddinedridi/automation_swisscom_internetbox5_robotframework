@@ -12,7 +12,7 @@ Test Teardown     Close Browser
 
 Verify Language selection
     [Documentation]    Checks if the language was correctly selected
-    [Tags]    notsanity
+    [Tags]    Sanity
     Auth Wait Login Page Loaded
     Select Language
     Check Language Correctly Selected    ${language}

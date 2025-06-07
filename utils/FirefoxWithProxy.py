@@ -16,7 +16,7 @@ class FirefoxWithProxy:
         options = FirefoxOptions()
         options.profile = profile
         options.binary_location = "/usr/bin/firefox"
-        options.add_argument('--headless')
+        #options.add_argument('--headless')
         driver = webdriver.Firefox(options=options)
 
         # Register the driver with SeleniumLibrary
