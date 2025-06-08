@@ -12,6 +12,10 @@ pip install robotframework-pabot
 pip install TestLink-API-Python-client
 
 
+// Static Code Analysis Tool: pip install robotframework-robocop
+
+robocop   --reports all,sarif   --configure sarif:report_filename:robot.sarif.json   ./tests/
+
 
 
 ----- Robotframework commands -----
@@ -291,5 +295,53 @@ and put the location of java : JAVA_HOME="/usr/lib/jvm/jdk-17-oracle-x64/bin/jav
 // jenkins plugins
 
 robot framework
+
+
+
+----- Setup sonarqube -----
+
+1) Create a SonarQube User: sudo adduser --system --no-create-home --group sonarqube
+
+2) go to https://www.sonarqube.org/downloads/ and download Community Edition
+
+3) sudo unzip sonarqubexxx.zip
+sudo mv sonarqubexxx sonarqube
+sudo mv sonarqube /opt/sonarqube
+
+4) sudo chown -R sonarqube:sonarqube /opt/sonarqube
+
+5) sudo nano /etc/systemd/system/sonarqube.service
+write: 
+
+[Unit]
+Description=SonarQube service
+After=network.target
+
+[Service]
+Type=forking
+
+ExecStart=/opt/sonarqube/bin/linux-x86-64/sonar.sh start
+ExecStop=/opt/sonarqube/bin/linux-x86-64/sonar.sh stop
+
+User=sonarqube
+Group=sonarqube
+Restart=always
+LimitNOFILE=65536
+LimitNPROC=4096
+
+[Install]
+WantedBy=multi-user.target
+
+and save
+
+6) sudo systemctl daemon-reload
+sudo systemctl start sonarqube
+sudo systemctl enable sonarqube
+sudo systemctl status sonarqube
+
+7) access to sonarqube webui: http://localhost:9000/
+
+Username: admin
+Password: admin
 
 
